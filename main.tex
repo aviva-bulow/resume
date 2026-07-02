@@ -7,6 +7,7 @@
 \usepackage{multicol}
 
 
+
 \usepackage[left= 0.8in, right = 0.8in, bottom=1in, top=0.6in]{geometry}
 \usepackage[svgnames]{xcolor}
 
@@ -22,13 +23,13 @@
 
 \newcommand{\lineunder}{\vspace*{-8pt} \\ \hspace*{-18pt} \hrulefill \\}
 
-\newcommand{\header}[1]{{\vspace*{8pt}\hspace*{-16pt} \textsc{\textbf{\large{#1}}}} \vspace*{4pt} \lineunder \vspace*{4pt}}
+\newcommand{\header}[1]{{\vspace*{8pt}\hspace*{-16pt} {\textbf{\large{#1}}}} \vspace*{4pt} \lineunder \vspace*{4pt}}
 
-\newcommand{\experience}[4]{{\vspace{-2pt}\bf{\underline{#1}}} \hfill  #2\\{\textsc{#3} \hfill \emph{#4}\\  }}
+\newcommand{\experience}[4]{{\vspace{0pt}\bf{#1}} \hfill  #2\\{\textsc{#3} \hfill \emph{#4}\\  }}
 
-\newcommand{\project}[1]{\vspace{-2pt}\underline{\bf{#1}}\vspace{5pt}}
+\newcommand{\project}[1]{\vspace{-2pt}\bf{#1}\vspace{5pt}}
 
-\newcommand{\skilltype}[1]{{\large \underline{#1}} \vspace{3pt} \\}
+\newcommand{\skilltype}[1]{\hspace{-8pt}{\large {#1}} \vspace{3pt} \\}
 
 \newcommand{\skilllevel}[1]{
 	\textsc{#1} \\ \vspace*{2pt}
@@ -41,18 +42,19 @@
 \newenvironment{skilllist}{\begin{list}{$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}\end{list}}
 \newenvironment{subskilllist}{\begin{list}{-}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}\end{list}}
 
-\newcommand{\contact}[5]{
+\newcommand{\contact}[4]{
 \begin{multicols}{2}
     \raggedcolumns
     \begin{flushleft}
-    { \Huge \scshape {#1}}\\
+    { \huge \scshape {#1}}\\
     \end{flushleft}
     
 \columnbreak
 
     \begin{flushright}
-    #2 \\ #3 \\
-    #4 \\ #5 \\
+    #2 \\ 
+    #3 \\
+    #4 \\
     \end{flushright}
 
 \end{multicols}
@@ -61,14 +63,14 @@
 
 
 \newcommand{\school}[4]{
- \textbf{\underline{#1}} (#3)
+ \textbf{#1} (#3)
  \\ \vspace{3pt} \textsc{#2} 
  \\   #4
 \vspace{5pt}
 }
 
 \newcommand{\schooltwo}[6]{
-    \textbf{\underline{#1}} (#3) 
+    \textbf{#1} (#3) 
     \\ \vspace{3pt} \textsc{#2, BS} 
     \\ Minors: \textsc{#5}
     \\  #4 $\bullet$ \textbf{#6}
@@ -84,18 +86,117 @@
 
 \small
 
-\contact{Aviva Bulow}{\text{aviva.bulow@gmail.com}}{+1(720)473-3836}{github.com/aviva-bulow}{linkedin.com/in/aviva-bulow}
+\contact{Aviva Bulow Mehlow}{\text{aviva@terrene.solutions}}{github.com/aviva-bulow}{linkedin.com/in/aviva-bulow}
 
-\vspace{-10pt}
+\vspace{-20pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   Professional Summary 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \header{Professional Summary}
-A software engineer with 6 years experience (primarily back-end systems in Python), I'm currently learning front-end development (in JavaScript/HTML with React+Bootstrap).
+ A technical leader and full-stack developer, I have 11 years of experience building scientifically rigorous systems to translate complex methodologies into reliable, scalable workflows. Operating at the intersection of climate science, data systems, software, and team management, I have a background in mathematics and am a strong cross-functional collaborator. I strive to align technical, scientific, and operational stakeholders, improving efficiency and integrity. I am committed to advancing climate action and equity through well designed high-impact systems and a compassionate and supportive work environment.
+ 
+%  My effectiveness at communicating complex concepts across knowledge barriers and my passion for equity make me a compassionate and collaborative coworker. 
 
-As an analytical thinker with a background in mathematics, I enjoy tackling difficult problems and exploring new ideas. What's more, I'm highly effective at communicating complex concepts across knowledge barriers. 
 
+%%%%%%%%%%%%%%%%%%%%%%
+%     Experience
+%%%%%%%%%%%%%%%%%%%%%%
+
+\header{Experience}
+
+\experience{Founding Partner and CEO}{Jan 2026 - Present}{Terrene Solutions \textnormal{(Contracting: Building Custom Software for Climate Tech Companies)}}{}
+
+\begin{achievements}
+    \item Built custom stratification software for the company Carbon Friendly to assist them in historically informed stratified random sampling. 
+    \item Assisted Carbon Friendly in assessing and understanding some of Verra's proposed changes to the VM0042.V2 methodology as it applies to control site selection. 
+    \item Formed a contracting company with another software engineer and a soil scientist to allow us to build custom scientific software for climate tech companies.
+    
+\end{achievements}
+
+
+\experience{Head of Software and Sr. Software Engineer}{March 2023 - Dec 2025}{Yard Stick PBC \textnormal{(Soil Carbon Monitoring via Novel Spectroscopic Soil Probes) }}{}
+
+\begin{achievements}
+   \item Maintained and expanded sample planning and carbon stock estimation software. 
+   \item Collaborated with Data Scientists to implement novel methods of estimating uncertainty in spectral stocks. 
+   \item Created equivalent soil mass based carbon stock estimation software to align with new measurement standards in Verra's VM0042.V2 methodology
+    \item Managed team of 3 other engineers. 
+    \item Assisted in hiring for Data Scientist and Soil Scientist roles
+    \item Lead several cross team projects, both as an engineer and as a member of the "Pursue Justice" committee. 
+    \item Enhanced equitable skills-based process for hiring across the company to improve Justice at Yard Stick. 
+    \item Tools used: \bf{Python, Pandas, SciPy, Numpy, DeepNote, GitHub}
+\end{achievements}
+
+\experience{Head of Software and Lead Software Engineer}{Jan 2020 - Feb 2023}{Sigray \textnormal{(developer and manufacturer of cutting edge x-ray systems) }}{}
+
+\begin{achievements}
+   \item Created and maintained multiple products including desktop apps used for data analysis and for supervisory control and data acquisition of X-Ray machines. 
+   \item Created data analysis software which integrates with Jupyter notebooks for improved prototyping and collaboration with scientists. 
+    \item Architected projects and complex features with, and provided regular mentoring to, junior engineers.
+    \item Worked on mission critical software for multiple multi-million dollar contracts. 
+    \item Set up testing standards and continuous integration.
+
+    \item Led a team of 7 software engineers across 3 production lines. 
+    
+    \item Designed equitable skills-based process for hiring; hired all but two software engineers at Sigray.  
+    \item Established clear expectations for Software Engineers at Sigray, with goalposts for internal promotions. 
+    \item Tools used: \bf{Python, Multiprocessing, SciPy, PySide, Numpy, Jupyter, FastAPI, Bitbucket Pipelines}
+\end{achievements}
+
+\experience{Software Developer and Founder}{2019 - Jan 2020}{SaltSlate \textnormal{(a stealth stage startup)}}{}
+\begin{achievements}
+	\item Developed a recipe mutation engine that enables scaling, detailed analysis, and efficient scheduling of the user's time.
+	
+	\item Built an importer that utilizes natural language processing to correctly extract and extrapolate information.
+	
+	\item Tools used: \textbf{Python}, \textbf{SQLite}, 
+ \textbf{CircleCI} and \textbf{Spacy} (a natural language toolkit)
+	\item Current size: \textbf{18k} lines of code, including 6.5k lines of tests with \textbf{74\%} coverage.
+	
+	\end{achievements}
+
+
+\experience{Graduate Researcher}{2017 - 2019}{UC Berkeley}{Advisor: Thomas Courtade}
+\begin{achievements}
+	\item Created software to estimate the quality of biosensors.
+	\item Utilized diffusion equations, novel differential equations, and Monte Carlo methods.
+	
+    \item Tools used: \textbf{Python} and \textbf{R}.
+\end{achievements}
+
+% \experience{Rotating Graduate Researcher}{2016 - 2017}{UC Berkeley}{Advisors: Rasmus Neilson, Ian Holmes}
+% \begin{achievements}
+
+% 	\item Designed and implemented a simulation to test assumptions about data generation. 
+% 	\item Created a stochastic context free grammar. Built a parser for the grammar. \item Tools used: \textbf{R} with ``ggplot2" library (for data visualization) and \textbf{Python}. 
+	
+	
+% \end{achievements}
+
+    
+\experience{Software Developer and Researcher}{2014-2016}{MSU Denver}{Advisor: Andrew Bonham}
+\begin{achievements}
+    \item Created software which designs DNA/Aptamer biosensors that adhere to user specifications.
+    \item Invented efficient methods for biosensor design and heuristic analysis. \textbf{480x faster} than previous method.
+    \item Tools used: \textbf{Python} with the ``multiprocessing" module (for parallelization).
+\end{achievements}
+
+%\experience{Undergraduate Summer Intern}{Advisor: Cory Wilson}{Rational Protein Design}{2013, Yale}{Protein Synthesis}
+
+%\begin{achievements}
+%    \item Synthesized and characterized ten new designs for E. coli's adenylate kinase enzyme.
+%    \item Skills involved: bacterial culture, gene synthesis, plasmid insertion, DNA extraction \& purification, protein extraction \& purification, and enzyme thermal-stability analysis via differential scanning calorimetry. 
+%\end{achievements}
+
+%\experience{Undergraduate Researcher and Project Manager}{Advisor: Douglas Petcoff}{Understanding Maturation and Apoptosis in X. Lavis Oocytes}{2011-2013, MSU Denver}{Experimental Cell Biology}
+
+%\begin{achievements}
+%    \item Designed and executed experiments aimed at elucidating the roles of sphingolipids and oxidative stress in maturation and apoptosis in Xenopus laevis oocytes. 
+%    \item Supervised other undergraduates and ensured our lab had the equipment and materials needed for the project.
+%\end{achievements}
+
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %    Skills Section
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -111,9 +212,8 @@ As an analytical thinker with a background in mathematics, I enjoy tackling diff
             \begin{subskilllist}
             \item multiprocessing
             \item unittest
-            \item vpython
             \item numpy
-            \item Spacy 
+            \item Jupyter Notebooks
             \end{subskilllist}
         
         \skilllevel{General Computing}
@@ -123,7 +223,8 @@ As an analytical thinker with a background in mathematics, I enjoy tackling diff
             \item Unit Testing
             \item Complexity Analysis
             \item Parallel Computing
-            \item Learning Languages
+            \item Machine Learning 
+            \item AI $\&$ RAG
         \end{skilllist}
             
 
@@ -132,10 +233,10 @@ As an analytical thinker with a background in mathematics, I enjoy tackling diff
     
     \skilltype{Computing}
     \vspace{2pt}
-    \skilllevel{Languages: Intermediate}
-        \languageskill{Dart} 
+    \skilllevel{Languages: Moderate}
+        \languageskill{JavaScript} 
             \begin{subskilllist}
-            \item Flutter
+            \item React
             \end{subskilllist}
         \languageskill{C}
             \begin{subskilllist}
@@ -145,7 +246,6 @@ As an analytical thinker with a background in mathematics, I enjoy tackling diff
         
         \languageskill{Java}
             \begin{subskilllist}
-            \item awt
             \item swing
             \end{subskilllist}
         \languageskill{R}
@@ -185,9 +285,10 @@ As an analytical thinker with a background in mathematics, I enjoy tackling diff
     
         \begin{skilllist}
             \item Communication
-            \item Management (small groups of people/projects)
+            \item Management (groups of people/projects)
             \item Organization
             \item Innovation $\&$ Design
+            \item Compassion 
         \end{skilllist}
         
         \vspace{2pt}
@@ -195,72 +296,14 @@ As an analytical thinker with a background in mathematics, I enjoy tackling diff
     
 \end{multicols}
 
-\vspace{-14pt}
 
-%%%%%%%%%%%%%%%%%%%%%%
-%     Experience
-%%%%%%%%%%%%%%%%%%%%%%
-
-\header{Experience}
-
-\experience{Software Developer and Founder}{2019 - Present}{SaltSlate \textnormal{(a stealth stage startup)}}{}
-\begin{achievements}
-	\item Developed a recipe mutation engine that enables scaling, detailed analysis, and efficient scheduling of the user's time.
-	
-	\item Built an importer that utilizes natural language processing to correctly extract and extrapolate information. It also interfaces with external databases to find nutrition information that it associates with the imported data. 
-	
-	\item Tools used: \textbf{Python}, \textbf{SQLite}, and \textbf{Spacy} (a natural language toolkit)
-	\item Current size: \textbf{18k} lines of code, including 6.5k lines of tests. \textbf{74\%} code coverage.
-	
-	\end{achievements}
-
-
-\experience{Graduate Researcher}{2017 - 2019}{UC Berkeley}{Advisor: Thomas Courtade}
-\begin{achievements}
-	\item Created software to estimate the quality of biosensors.
-	\item Utilized diffusion equations, novel differential equations, and Monte Carlo methods.
-	
-    \item Tools used: \textbf{Python} with modules ``multiprocessing" and ``vpython" (for parallelization, 3D vector calculations, and visualization) and \textbf{R} (for data analysis).
-\end{achievements}
-
-\experience{Rotating Graduate Researcher}{2016 - 2017}{UC Berkeley}{Advisors: Rasmus Neilson, Ian Holmes}
-\begin{achievements}
-
-	\item Designed and implemented a simulation to test assumptions about data generation. 
-	\item Created a stochastic context free grammar. Built a parser for the grammar. \item Tools used: \textbf{R} with ``ggplot2" library (for data visualization) and \textbf{Python}. 
-	
-	
-\end{achievements}
-
-    
-\experience{Software Developer and Researcher}{2014-2016}{MSU Denver}{Advisor: Andrew Bonham}
-\begin{achievements}
-    \item Created software which designs biosensors that adhere to user specifications.
-    \item Invented efficient methods for biosensor design and heuristic analysis. \textbf{480x faster} than previous method.
-    \item Created a command line interface.
-    \item Tools used: \textbf{Python} with the ``multiprocessing" module (for parallelization).
-\end{achievements}
-
-%\experience{Undergraduate Summer Intern}{Advisor: Cory Wilson}{Rational Protein Design}{2013, Yale}{Protein Synthesis}
-
-%\begin{achievements}
-%    \item Synthesized and characterized ten new designs for E. coli's adenylate kinase enzyme.
-%    \item Skills involved: bacterial culture, gene synthesis, plasmid insertion, DNA extraction \& purification, protein extraction \& purification, and enzyme thermal-stability analysis via differential scanning calorimetry. 
-%\end{achievements}
-
-%\experience{Undergraduate Researcher and Project Manager}{Advisor: Douglas Petcoff}{Understanding Maturation and Apoptosis in X. Lavis Oocytes}{2011-2013, MSU Denver}{Experimental Cell Biology}
-
-%\begin{achievements}
-%    \item Designed and executed experiments aimed at elucidating the roles of sphingolipids and oxidative stress in maturation and apoptosis in Xenopus laevis oocytes. 
-%    \item Supervised other undergraduates and ensured our lab had the equipment and materials needed for the project.
-%\end{achievements}
 
 %%%%%%%%%%%%%%%%%%%%%
 %    Education
 %%%%%%%%%%%%%%%%%%%%%
-\vspace{-5pt}
+
 \header{Education}
-\vspace{-14pt}
+\vspace{-10pt}
 \begin{multicols}{2}
     
 \school{UC Berkeley}{Computational Biology PhD program}{2016 - 2019}{GPA: 3.7/4.0}
@@ -270,100 +313,100 @@ As an analytical thinker with a background in mathematics, I enjoy tackling diff
 
 \end{multicols}
 
-\newpage
+% \newpage
 
-\contact{\huge{Aviva Bulow}}{\text{aviva.bulow@gmail.com}}{+1(720)473-3836}{github.com/aviva-bulow}{linkedin.com/in/aviva-bulow}
+% \contact{\huge{Aviva Bulow}}{\text{aviva.bulow@gmail.com}}{+1(720)473-3836}{github.com/aviva-bulow}{linkedin.com/in/aviva-bulow}
 
-\vspace{-10pt}
-\vspace{-10pt}
+% \vspace{-10pt}
+% \vspace{-10pt}
 
 %%%%%%%%%%%%%%%%%%%%%
 %   Projects
 %%%%%%%%%%%%%%%%%%%%%
 
-\header{Additional Projects}
+% \header{Additional Projects}
 
-\project{Garden Timelapse}
-    \begin{achievements}
-        \item Set up a Raspberry Pi to take photos of my garden for a time lapse video.
-        \item Tools used: Raspberry Pi, Bash, Cron, Motion
-    \end{achievements}
+% \project{Garden Timelapse}
+%     \begin{achievements}
+%         \item Set up a Raspberry Pi to take photos of my garden for a time lapse video.
+%         \item Tools used: Raspberry Pi, Bash, Cron, Motion
+%     \end{achievements}
     
-\project{Wine Tasting Tracker}
-    \begin{achievements}
-        \item Created a peice of software to track wine and cheese tasting, rating, and pairing.
-        \item Tools used: Java
-    \end{achievements}
+% \project{Wine Tasting Tracker}
+%     \begin{achievements}
+%         \item Created a peice of software to track wine and cheese tasting, rating, and pairing.
+%         \item Tools used: Java
+%     \end{achievements}
     
-\project{Food Journal}
-    \begin{achievements}
-        \item Wrote a program that tracked what I ate. 
-        \item Tools used: Java, Bash
-    \end{achievements}
+% \project{Food Journal}
+%     \begin{achievements}
+%         \item Wrote a program that tracked what I ate. 
+%         \item Tools used: Java, Bash
+%     \end{achievements}
         
 
-%%%%%%%%%%%%%%%%%%%%%
-%  Presentations
-%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%
+% %  Presentations
+% %%%%%%%%%%%%%%%%%%%%%
 
-\header{Presentations}
-\begin{itemize}
-    \item Poster presented at UC Berkeley’s Computational Biology student retreat. \href{https://drive.google.com/file/d/1KP7PMcwjiTxELFN4eLtC5HGHk9OF8_WL/view?usp=sharing}{\emph{The Distortion of an Assembly.}} A. Bulow, T. Courtade, 2017.
+% \header{Presentations}
+% \begin{itemize}
+%     \item Poster presented at UC Berkeley’s Computational Biology student retreat. \href{https://drive.google.com/file/d/1KP7PMcwjiTxELFN4eLtC5HGHk9OF8_WL/view?usp=sharing}{\emph{The Distortion of an Assembly.}} A. Bulow, T. Courtade, 2017.
     
-    \item Oral presentation at MSU's undergraduate research conference. \href{https://drive.google.com/open?id=1Qp-pwFFNq9W6Y1yXco7bPYb9gR42gzD2}{\emph{Development of Algorithmic, Graph-Based Techniques for the Automated Design of DNA Biosensors.}} A. Bulow, J. Stephens, A. Bonham, 2015.
+%     \item Oral presentation at MSU's undergraduate research conference. \href{https://drive.google.com/open?id=1Qp-pwFFNq9W6Y1yXco7bPYb9gR42gzD2}{\emph{Development of Algorithmic, Graph-Based Techniques for the Automated Design of DNA Biosensors.}} A. Bulow, J. Stephens, A. Bonham, 2015.
     
-    \item Poster presented at Yale's undergraduate poster session. \href{https://drive.google.com/open?id=1Nw7wZhaQDygO1d3IZz-vhO8EmXwR53my}{\emph{Conferring Temperature Adapted Function by Rational Protein Design.}} A. Bulow, S. Howell, C. Wilson, 2013.
+%     \item Poster presented at Yale's undergraduate poster session. \href{https://drive.google.com/open?id=1Nw7wZhaQDygO1d3IZz-vhO8EmXwR53my}{\emph{Conferring Temperature Adapted Function by Rational Protein Design.}} A. Bulow, S. Howell, C. Wilson, 2013.
     
-    \item Oral presentation at Yale. \href{https://drive.google.com/open?id=1sF4QX-CQlN3W_EaFlgoVAvbmasgJ1z5q}{\emph{Redesigning E. coli's Adenylate Kinase for Enhanced Thermostability.}} A. Bulow, S. Howell, C. Wilson, 2013.
+%     \item Oral presentation at Yale. \href{https://drive.google.com/open?id=1sF4QX-CQlN3W_EaFlgoVAvbmasgJ1z5q}{\emph{Redesigning E. coli's Adenylate Kinase for Enhanced Thermostability.}} A. Bulow, S. Howell, C. Wilson, 2013.
     
-    \item Poster presented at the American Society for Cell Biology. \href{https://drive.google.com/open?id=1Vq4hbrAPjBWLphlA4Se0KVR6hjOEQe-S}{\emph{Sphingolipids Cause Release From Meiotic Arrest and Onset of Apoptosis in Xenopus Oocytes.}} A. Bulow, M. Kunitsyna-	Marev, D. W. Petcoff, 2012.
+%     \item Poster presented at the American Society for Cell Biology. \href{https://drive.google.com/open?id=1Vq4hbrAPjBWLphlA4Se0KVR6hjOEQe-S}{\emph{Sphingolipids Cause Release From Meiotic Arrest and Onset of Apoptosis in Xenopus Oocytes.}} A. Bulow, M. Kunitsyna-	Marev, D. W. Petcoff, 2012.
     
-    \item Poster presented at the ASBMB annual meeting. \href{https://drive.google.com/open?id=13EF6xDcyMrBdnJIrP-nvODf55aXsTH6-}{\emph{Sphingolipid Metabolism in Xenopus laevis Oocyte Maturation and Apoptotic Death.}} D. W. Petcoff, A. Bulow, T. D. Hostetter, 2012.
+%     \item Poster presented at the ASBMB annual meeting. \href{https://drive.google.com/open?id=13EF6xDcyMrBdnJIrP-nvODf55aXsTH6-}{\emph{Sphingolipid Metabolism in Xenopus laevis Oocyte Maturation and Apoptotic Death.}} D. W. Petcoff, A. Bulow, T. D. Hostetter, 2012.
     
-    \item Oral presentation at MSU's Undergraduate Research Day conference. \href{https://drive.google.com/open?id=1ln5oxNm-i0YR0fhrTjiymTV8P7ksthtm}{\emph{Life and Death in Xenopus laevis Oocytes.}} A. Bulow, T. H. Hostetter, D. W. Petcoff, 2012.
+%     \item Oral presentation at MSU's Undergraduate Research Day conference. \href{https://drive.google.com/open?id=1ln5oxNm-i0YR0fhrTjiymTV8P7ksthtm}{\emph{Life and Death in Xenopus laevis Oocytes.}} A. Bulow, T. H. Hostetter, D. W. Petcoff, 2012.
     
-    \item Poster presented at the ASCB annual meeting. \href{https://drive.google.com/open?id=1WiOZdf3LeyTG-4txPeANV7zDjhcjQIQ5}{\emph{The Role of Lipids in Induction of Apoptosis in Xenopus Oocytes.}} D. W. Petcoff, A. Bulow, 2011.
+%     \item Poster presented at the ASCB annual meeting. \href{https://drive.google.com/open?id=1WiOZdf3LeyTG-4txPeANV7zDjhcjQIQ5}{\emph{The Role of Lipids in Induction of Apoptosis in Xenopus Oocytes.}} D. W. Petcoff, A. Bulow, 2011.
     
 
-\end{itemize}
-
-
+% \end{itemize}
 
 
-%%%%%%%%%%%%%%%%
-%   Awards
-%%%%%%%%%%%%%%%%
 
-\header{Grants, Honors, and Awards}
-\begin{itemize}
-	\item 2019 \textbf{Travel Grant} to attend the Grad Cohort Workshop for Women
+
+% %%%%%%%%%%%%%%%%
+% %   Awards
+% %%%%%%%%%%%%%%%%
+
+% \header{Grants, Honors, and Awards}
+% \begin{itemize}
+% 	\item 2019 \textbf{Travel Grant} to attend the Grad Cohort Workshop for Women
     
-   \item 2016 \textbf{Chancellor's Fellowship} for Graduate Study at UC Berkeley (a two year fellowship).
-   %\item 2015 \textbf{Summa Cum Laude}, graduation with distinction from MSU Denver.
-   \item 2015  \textbf{Achievement Award} for exceptional accomplishments in Theoretical Mathematics, presented by the department of Mathematical and Computer Sciences at MSU Denver
-   \item 2013  \textbf{Sackler/NSF REU fellowship} grant to perform research at Yale for a summer.
-   \item 2012  \textbf{Undergraduate Research Grant} for \textit{Investigation into the Role of Oxidative Stress on Oocyte Maturation}.
-   \item 2012 \textbf{Student Travel Grant} to attend the American Society for Cell Biology annual meeting.
-   \item 2012 \textbf{Undergraduate Research Grant} for \textit{Investigation of Apoptosis and Maturation in Xenopus Laevis Oocytes}.
-   \item 2012 \textbf{Student Travel Grant} to attend the American Society for Microbiology annual meeting. 
-   \item 2011    \textbf{LAS Dean's grant} for research into \textit{Oxidative stress and apoptotic death in Xenopus oocytes}
-   \item 2011    \textbf{Goldwater Scholarship} Honorable Mention
+%   \item 2016 \textbf{Chancellor's Fellowship} for Graduate Study at UC Berkeley (a two year fellowship).
+%   %\item 2015 \textbf{Summa Cum Laude}, graduation with distinction from MSU Denver.
+%   \item 2015  \textbf{Achievement Award} for exceptional accomplishments in Theoretical Mathematics, presented by the department of Mathematical and Computer Sciences at MSU Denver
+%   \item 2013  \textbf{Sackler/NSF REU fellowship} grant to perform research at Yale for a summer.
+%   \item 2012  \textbf{Undergraduate Research Grant} for \textit{Investigation into the Role of Oxidative Stress on Oocyte Maturation}.
+%   \item 2012 \textbf{Student Travel Grant} to attend the American Society for Cell Biology annual meeting.
+%   \item 2012 \textbf{Undergraduate Research Grant} for \textit{Investigation of Apoptosis and Maturation in Xenopus Laevis Oocytes}.
+%   \item 2012 \textbf{Student Travel Grant} to attend the American Society for Microbiology annual meeting. 
+%   \item 2011    \textbf{LAS Dean's grant} for research into \textit{Oxidative stress and apoptotic death in Xenopus oocytes}
+%   \item 2011    \textbf{Goldwater Scholarship} Honorable Mention
 
-\end{itemize}
+% \end{itemize}
 
-%%%%%%%%%%%%%%%%
-%   Volunteer
-%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%
+% %   Volunteer
+% %%%%%%%%%%%%%%%%
 
-\header{Volunteer Experience}
-\begin{itemize}
-    \item 2018	\textbf{Founder} of the Computational Biology student group
-    \item 2017/2018 \textbf{Graduate Student Representative} for  Computational Biology
-    \item 2017 \textbf{Recruiter} at SACNAS, a diversity in STEM conference.
-    \item 2017 \textbf{Coordinator} for the Computational Biology weekly events mailing list.
-    \item 2017  \textbf{Member of the planning committee} for the 2017 Computational Biology and Genomics retreat.
-    \item 2017 Engaged in the Chancellor's Graduate Student Fireside Chat - Status of Black Graduate Students. (I was one of five students selected to participate.)
+% \header{Volunteer Experience}
+% \begin{itemize}
+%     \item 2018	\textbf{Founder} of the Computational Biology student group
+%     \item 2017/2018 \textbf{Graduate Student Representative} for  Computational Biology
+%     \item 2017 \textbf{Recruiter} at SACNAS, a diversity in STEM conference.
+%     \item 2017 \textbf{Coordinator} for the Computational Biology weekly events mailing list.
+%     \item 2017  \textbf{Member of the planning committee} for the 2017 Computational Biology and Genomics retreat.
+%     \item 2017 Engaged in the Chancellor's Graduate Student Fireside Chat - Status of Black Graduate Students. (I was one of five students selected to participate.)
     
-\end{itemize}
+% \end{itemize}
 
 \end{document}
